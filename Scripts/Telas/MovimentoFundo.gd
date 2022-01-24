@@ -20,7 +20,6 @@ func _ready():
 func _process(delta):
 	$Fundo1.rect_position.x += direcao;
 	$Fundo2.rect_position.x += direcao;
-	print(abs($Fundo1.rect_position.x));
 	if abs($Fundo1.rect_position.x) >= 1024:
 		$Fundo1.rect_position.x = 0;
 		$Fundo2.rect_position.x = -direcao*1024;
