@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Scene/posicao_balao_info.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Correio.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Imagens/icon.png" type="Texture" id=4]
 
 [node name="Steve" type="KinematicBody2D"]
@@ -12,10 +11,5 @@ script = ExtResource( 1 )
 position = Vector2( 210, 318 )
 texture = ExtResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 210, 316 )
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
 current = true
-
-[node name="Correio" parent="." instance=ExtResource( 3 )]
-
-[node name="posicao_balao_info" parent="." instance=ExtResource( 2 )]

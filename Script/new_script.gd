@@ -1,8 +1,8 @@
 extends Node
 
-var qualidade_alta = preload("res://icon.png")
-var qualidade_medio = preload("res://icon.png")
-var qualidade_baixo = preload("res://icon.png")
+var qualidade_alta = preload("res://Imagens/icon.png")
+var qualidade_medio = preload("res://Imagens/icon.png")
+var qualidade_baixo = preload("res://Imagens/icon.png")
 var mail_sprite 
 var text_mail
 
