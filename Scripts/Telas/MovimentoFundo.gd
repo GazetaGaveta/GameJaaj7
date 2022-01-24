@@ -12,7 +12,7 @@ export(int, -1, 1, 2) var direcao;
 func _ready():
 	add_child(fundo.instance());
 	var f = fundo.instance();
-	f.rect_position.x = 1024;
+	f.rect_position.x = -direcao*1024;
 	f.name = "Fundo2";
 	add_child(f);
 	pass # Replace with function body.
@@ -22,10 +22,8 @@ func _process(delta):
 	$Fundo2.rect_position.x += direcao;
 	print(abs($Fundo1.rect_position.x));
 	if abs($Fundo1.rect_position.x) >= 1024:
-		$Fundo1.rect_position.x = -1*$Fundo1.rect_position.x;
-	elif abs($Fundo2.rect_position.x) >= 1024:
-		$Fundo2.rect_position.x = -1*$Fundo1.rect_position.x;
-	pass
+		$Fundo1.rect_position.x = 0;
+		$Fundo2.rect_position.x = -direcao*1024;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
