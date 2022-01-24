@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/5 - Sky_color.png-20aaa37bc126e756f5d1c4f21ffc2817.stex"
+path="res://.import/_Complete_static_BG_(288 x 208).png-494e3156f79e0128eb2fbf12124acd93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background parts/5 - Sky_color.png"
-dest_files=[ "res://.import/5 - Sky_color.png-20aaa37bc126e756f5d1c4f21ffc2817.stex" ]
+source_file="res://Imagens/Background parts/_Complete_static_BG_(288 x 208).png"
+dest_files=[ "res://.import/_Complete_static_BG_(288 x 208).png-494e3156f79e0128eb2fbf12124acd93.stex" ]
 
 [params]
 

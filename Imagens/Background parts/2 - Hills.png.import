@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Extra_plants (16 x 16).png-a816198ee779eb433781957369987432.stex"
+path="res://.import/2 - Hills.png-4f18839cd275a0cdd3c1b33717153ccc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra_plants (16 x 16).png"
-dest_files=[ "res://.import/Extra_plants (16 x 16).png-a816198ee779eb433781957369987432.stex" ]
+source_file="res://Imagens/Background parts/2 - Hills.png"
+dest_files=[ "res://.import/2 - Hills.png-4f18839cd275a0cdd3c1b33717153ccc.stex" ]
 
 [params]
 

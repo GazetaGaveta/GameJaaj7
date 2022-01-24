@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2 - Hills.png-3d7c266b092972f15fa8db1262d043ce.stex"
+path="res://.import/5 - Sky_color.png-54734430d93cf71d6c11ec54ea446c1d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background parts/2 - Hills.png"
-dest_files=[ "res://.import/2 - Hills.png-3d7c266b092972f15fa8db1262d043ce.stex" ]
+source_file="res://Imagens/Background parts/5 - Sky_color.png"
+dest_files=[ "res://.import/5 - Sky_color.png-54734430d93cf71d6c11ec54ea446c1d.stex" ]
 
 [params]
 

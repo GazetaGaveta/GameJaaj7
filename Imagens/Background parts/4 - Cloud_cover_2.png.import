@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_Complete_static_BG_(288 x 208).png-d37549809caccaa39323711e3d9c29c2.stex"
+path="res://.import/4 - Cloud_cover_2.png-eba613b067d95ddc5e9fbfd7f286b309.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background parts/_Complete_static_BG_(288 x 208).png"
-dest_files=[ "res://.import/_Complete_static_BG_(288 x 208).png-d37549809caccaa39323711e3d9c29c2.stex" ]
+source_file="res://Imagens/Background parts/4 - Cloud_cover_2.png"
+dest_files=[ "res://.import/4 - Cloud_cover_2.png-eba613b067d95ddc5e9fbfd7f286b309.stex" ]
 
 [params]
 

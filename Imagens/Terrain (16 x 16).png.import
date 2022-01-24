@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grassland_entities (16 x 16).png-66b0064e40dc9fa20bcb7fa21c2eafd8.stex"
+path="res://.import/Terrain (16 x 16).png-fe7b509ca23d71cd3e9999f2fd6dca33.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Grassland_entities (16 x 16).png"
-dest_files=[ "res://.import/Grassland_entities (16 x 16).png-66b0064e40dc9fa20bcb7fa21c2eafd8.stex" ]
+source_file="res://Imagens/Terrain (16 x 16).png"
+dest_files=[ "res://.import/Terrain (16 x 16).png-fe7b509ca23d71cd3e9999f2fd6dca33.stex" ]
 
 [params]
 
