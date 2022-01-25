@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bolsa_abrir.mp3-f240fd487ee3e0deea8dfd1fa6e5ce30.mp3str"
+
+[deps]
+
+source_file="res://Audios/Bolsa_abrir.mp3"
+dest_files=[ "res://.import/Bolsa_abrir.mp3-f240fd487ee3e0deea8dfd1fa6e5ce30.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

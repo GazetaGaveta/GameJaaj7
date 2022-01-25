@@ -25,5 +25,7 @@ func _ready():
 
 func _on_EventOption_pressed(extra_arg_0):
 	print(extra_arg_0);
+	$AudioStreamPlayer.play();
+	yield($AudioStreamPlayer, "finished");
 	emit_signal("chosenOption", extra_arg_0, Modificadores[extra_arg_0]);
 	pass # Replace with function body.

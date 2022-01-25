@@ -1,12 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://Imagens/Sprite-0001.png" type="Texture" id=1]
 [ext_resource path="res://PackedScenes/Telas/FundoCeu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Telas/TelaInicial.gd" type="Script" id=3]
+[ext_resource path="res://Audios/Bolsa_abrir.tres" type="AudioStream" id=4]
 [ext_resource path="res://Imagens/logo.png" type="Texture" id=5]
 [ext_resource path="res://PackedScenes/Telas/FundoMovimentando.tscn" type="PackedScene" id=7]
 
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 48 )
+
 [node name="Tela Inicial" type="Control"]
+pause_mode = 1
 margin_right = 1024.0
 margin_bottom = 600.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -27,29 +36,6 @@ margin_bottom = 0.0
 fundo = ExtResource( 2 )
 direcao = -1
 
-[node name="TextureRect3" type="TextureRect" parent="."]
-margin_left = 561.0
-margin_top = 107.0
-margin_right = 881.0
-margin_bottom = 427.0
-stretch_mode = 1
-flip_h = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect5" type="TextureRect" parent="."]
-margin_left = 371.0
-margin_top = 126.0
-margin_right = 1011.0
-margin_bottom = 766.0
-stretch_mode = 1
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="TextureRect4" type="TextureRect" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
@@ -64,7 +50,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 78.0
+margin_top = 250.0
+margin_right = 118.0
+margin_bottom = 290.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlay" type="Button" parent="."]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -73,7 +69,13 @@ margin_left = -946.0
 margin_top = -50.0
 margin_right = -546.0
 margin_bottom = 250.0
+custom_styles/normal = SubResource( 1 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_ButtonPlay_pressed"]
