@@ -21,5 +21,6 @@ func _ready():
 
 
 func _on_EventOption_pressed():
+	visible = false;
 	emit_signal("resultadoFoiLido");
 	pass # Replace with function body.
