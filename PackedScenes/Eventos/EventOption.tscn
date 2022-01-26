@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Eventos/EventOption.gd" type="Script" id=1]
 [ext_resource path="res://Imagens/Botões/Botões Eventos/botao_papel.png" type="Texture" id=2]
 [ext_resource path="res://Imagens/Botões/Botões Eventos/botao_papel_hover.png" type="Texture" id=3]
 [ext_resource path="res://Imagens/Botões/Botões Eventos/botao_papel_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Audios/Botões/Eventos/papel.tres" type="AudioStream" id=5]
 
 [node name="EventOption" type="TextureButton"]
 anchor_top = 0.5
@@ -31,3 +32,8 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="." to="." method="_on_EventOption_pressed"]

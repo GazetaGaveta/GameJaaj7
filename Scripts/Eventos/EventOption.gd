@@ -18,3 +18,9 @@ func set_texto_option(texto):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_EventOption_pressed():
+	$AudioStreamPlayer.play();
+	yield($AudioStreamPlayer, "finished");
+	pass # Replace with function body.

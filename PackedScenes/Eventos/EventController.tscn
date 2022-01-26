@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://PackedScenes/Eventos/EventoTeste.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PackedScenes/Eventos/Evento.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Eventos/EventController.gd" type="Script" id=3]
 
 [node name="EventController" type="Control"]
@@ -12,6 +13,21 @@ __meta__ = {
 }
 
 [node name="EventoTeste" parent="." instance=ExtResource( 1 )]
+Modificadores = [ {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+}, {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+}, {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+} ]
+
+[node name="Evento" parent="." instance=ExtResource( 2 )]
 Modificadores = [ {
 "Distancia": 0,
 "DistanciaPombo": 0,
