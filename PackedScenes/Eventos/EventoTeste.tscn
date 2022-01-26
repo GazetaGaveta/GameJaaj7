@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PackedScenes/Eventos/Evento.tscn" type="PackedScene" id=1]
+
+[node name="EventoTeste" instance=ExtResource( 1 )]
+Modificadores = [ {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+}, {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+}, {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+} ]
+
+[node name="TextoEvento" parent="CaixaEvento" index="0"]
+text = "Rato de botas encontra seu antigo rival de xadrez, Marker Zukerberg, o dono de uma rede social famosa chamada Caralivro."
+
+[node name="EventOption1" parent="CaixaEvento" index="1"]
+texto = "Rato decide jogar xadrez com seu amigo."
+
+[node name="EventOption2" parent="CaixaEvento" index="2"]
+texto = "Rato Pergunta da família de Marker."
+
+[node name="EventOption3" parent="CaixaEvento" index="3"]
+texto = "Rato inicia uma conversa sobre a Caralivro."
+
+[node name="Resultado1" parent="." index="1"]
+texto = "Rato decide jogar xadrez com seu amigo. O jogo é bastante longo, pois as regras extras de markinho fazem as peças voltarem de diferentes dimensões montadas em animais fantásticos. Mas como o jogo foi divertido, Marker ajuda o rato com um conserto da carta. [Concerta carta/ Andar menos]"
+
+[node name="Resultado2" parent="." index="2"]
+texto = "Rato Pergunta da família de Marker. Marker fala dos problemas com a esposa e sobre a amante que ela havia descoberto. Fala dos problemas com os filhos, que são muito viciados em redes sociais e não gostam de xadrez. Eles continuam conversando por um tempo na limousine de marker, até que acidentalmente derramam vinho tinto na bolsa do rato. O rato explica da corrida, e marker, como pedido de desculpas pelo vinho, pede para um helicóptero levar o rato por parte do caminho. [Estraga carta/ Andar mais]"
+
+[node name="Resultado3" parent="." index="3"]
+texto = "Rato inicia uma conversa sobre a Caralivro. Pergunta para Marker se seria possível usar uma conta de um outro usuário com os privilégios de dono da rede. Quando marker diz que sim, eles se juntam para cometer uma vigarice com a conta do pombo correio, fazendo comentários maldosos nas postagens das pombas que ele gosta. O Pombo perde algum tempo dizendo para todos que não foi ele e que sua conta foi hackeada. [Prejudicar pombo / Andar menos]"

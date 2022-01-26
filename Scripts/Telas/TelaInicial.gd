@@ -12,7 +12,18 @@ func _ready():
 
 
 func _on_ButtonPlay_pressed():
+	pass # Replace with function body.
+
+
+func _on_ButtonPlay_mouse_entered():
 	$AudioStreamPlayer.play();
 	yield($AudioStreamPlayer, "finished");
+	emit_signal("playPressed");
+	pass # Replace with function body.
+
+
+func _on_ButtonPlay_mouse_exited():
+	$AudioStreamPlayer2.play();
+	yield($AudioStreamPlayer2, "finished");
 	emit_signal("playPressed");
 	pass # Replace with function body.

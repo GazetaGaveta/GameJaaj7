@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pombo.png-61fe72a6c29293d5a33595940748197b.stex"
+path="res://.import/Esgoto.png-e69dbf610b906fa5160e6f3391e4efe9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/pombo.png"
-dest_files=[ "res://.import/pombo.png-61fe72a6c29293d5a33595940748197b.stex" ]
+source_file="res://Imagens/Esgoto.png"
+dest_files=[ "res://.import/Esgoto.png-e69dbf610b906fa5160e6f3391e4efe9.stex" ]
 
 [params]
 

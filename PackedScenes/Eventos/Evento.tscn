@@ -3,15 +3,25 @@
 [ext_resource path="res://Imagens/quadrado.jpg" type="Texture" id=1]
 [ext_resource path="res://PackedScenes/Eventos/EventOption.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Eventos/Evento.gd" type="Script" id=3]
-[ext_resource path="res://Audios/Bolsa_abrir.tres" type="AudioStream" id=4]
+[ext_resource path="res://PackedScenes/Eventos/Resultado.tscn" type="PackedScene" id=4]
 
-[node name="Evento" type="Control"]
+[node name="Evento" type="Popup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+Modificadores = [ {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+}, {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+}, {
+"Distancia": 0,
+"DistanciaPombo": 0,
+"Estrago": 0
+} ]
 
 [node name="CaixaEvento" type="TextureRect" parent="."]
 anchor_left = 0.5
@@ -40,19 +50,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EventOption" parent="CaixaEvento" instance=ExtResource( 2 )]
+[node name="EventOption1" parent="CaixaEvento" instance=ExtResource( 2 )]
+margin_left = 20.0
+margin_right = -20.0
 
 [node name="EventOption2" parent="CaixaEvento" instance=ExtResource( 2 )]
+margin_left = 20.0
 margin_top = 35.0
+margin_right = -20.0
 margin_bottom = 135.0
 
 [node name="EventOption3" parent="CaixaEvento" instance=ExtResource( 2 )]
+margin_left = 20.0
 margin_top = 140.0
+margin_right = -20.0
 margin_bottom = 240.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+[node name="Resultado1" parent="." instance=ExtResource( 4 )]
 
-[connection signal="pressed" from="CaixaEvento/EventOption" to="." method="_on_EventOption_pressed" binds= [ 0 ]]
+[node name="Resultado2" parent="." instance=ExtResource( 4 )]
+
+[node name="Resultado3" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="CaixaEvento/EventOption1" to="." method="_on_EventOption_pressed" binds= [ 0 ]]
 [connection signal="pressed" from="CaixaEvento/EventOption2" to="." method="_on_EventOption_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="CaixaEvento/EventOption3" to="." method="_on_EventOption_pressed" binds= [ 2 ]]
+[connection signal="resultadoFoiLido" from="Resultado1" to="." method="_on_Resultado_resultadoFoiLido"]
+[connection signal="resultadoFoiLido" from="Resultado2" to="." method="_on_Resultado_resultadoFoiLido"]
+[connection signal="resultadoFoiLido" from="Resultado3" to="." method="_on_Resultado_resultadoFoiLido"]
