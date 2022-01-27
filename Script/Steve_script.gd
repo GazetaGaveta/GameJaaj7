@@ -15,6 +15,5 @@ func _physics_process(delta):
 	var collision = move_and_collide(vel)
 	if collision:
 		var collider = collision.collider
-		print(collider.get_instance_id())
-		print(collider.get_indexed())	
+		print(collider.get_instance_id())	
 		print(collider)
