@@ -17,6 +17,10 @@ config/icon="res://Imagens/icon.png"
 
 window/size/resizable=false
 
+[gui]
+
+theme/custom_font="res://Fonts/PixelEmulator.tres"
+
 [physics]
 
 common/enable_pause_aware_picking=true
