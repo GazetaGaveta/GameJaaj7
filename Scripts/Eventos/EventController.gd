@@ -27,7 +27,7 @@ func _eventoTerminado():
 	var eventos = $Eventos.get_children();
 	eventos[randomNumber].queue_free();
 	#eventos[randomNumber].visible = false;
-	$Timer.start();
+	#$Timer.start();
 	pass # Replace with function body.
 
 
