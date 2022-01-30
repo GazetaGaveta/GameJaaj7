@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://PackedScenes/Telas/FundoRecife.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PackedScenes/Eventos/EventController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PackedScenes/Telas/FundoMovimentando.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PackedScenes/Telas/Information.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Imagens/icon.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Telas/Tela de jogo/TelaDeJogo.gd" type="Script" id=6]
 
@@ -21,21 +20,23 @@ direcao = -1
 
 [node name="EventController" parent="." instance=ExtResource( 2 )]
 
-[node name="Control" parent="." instance=ExtResource( 4 )]
-
-[node name="Control2" parent="." instance=ExtResource( 4 )]
-anchor_left = 1.0
-anchor_bottom = 0.0
-margin_left = -128.0
-margin_right = 0.0
-margin_bottom = 64.0
-
 [node name="Icon" type="Sprite" parent="."]
 position = Vector2( 494, 448 )
 texture = ExtResource( 5 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TimerDistancia" type="Timer" parent="."]
 one_shot = true
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="TimerEvento" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+margin_right = 128.0
+margin_bottom = 64.0
+
+[connection signal="resultadoEvento" from="EventController" to="." method="_on_EventController_resultadoEvento"]
+[connection signal="timeout" from="TimerDistancia" to="." method="_on_TimerDistancia_timeout"]
+[connection signal="timeout" from="TimerEvento" to="." method="_on_TimerEvento_timeout"]

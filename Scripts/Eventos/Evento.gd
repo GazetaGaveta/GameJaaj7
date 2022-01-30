@@ -4,8 +4,11 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-signal eventoTerminado;
-const optionDictionary = {"Estrago": 0, "Distancia": 0, "DistanciaPombo":0};
+const optionDictionary = {
+	"estrago": 0, 
+	"distancia": 0, 
+	"distanciaPombo":0
+	};
 export(Array, Dictionary) var Modificadores = [
 	optionDictionary,
 	optionDictionary,
@@ -13,6 +16,9 @@ export(Array, Dictionary) var Modificadores = [
 	];
 
 signal chosenOption(option, modificadores)
+signal eventoTerminado(modificadores);
+
+var resultadoEscolhido;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,9 +32,9 @@ func _ready():
 
 func _on_EventOption_pressed(extra_arg_0):
 	get_node("Resultado%d" % (extra_arg_0+1)).visible = true;
-	emit_signal("chosenOption", extra_arg_0, Modificadores[extra_arg_0]);
+	resultadoEscolhido =  Modificadores[extra_arg_0];
 	pass # Replace with function body.
 
 func _on_Resultado_resultadoFoiLido():
-	emit_signal("eventoTerminado");
+	emit_signal("eventoTerminado", resultadoEscolhido);
 	pass # Replace with function body.

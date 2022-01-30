@@ -10,17 +10,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 Modificadores = [ {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 4,
+"distanciaPombo": 4,
+"estrago": 4
 }, {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
 }, {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
 } ]
 
 [node name="CaixaEvento" type="TextureRect" parent="."]

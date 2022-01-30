@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://PackedScenes/Eventos/EventoTeste.tscn" type="PackedScene" id=1]
-[ext_resource path="res://PackedScenes/Eventos/Evento.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Eventos/EventController.gd" type="Script" id=3]
 
 [node name="EventController" type="Control"]
@@ -21,37 +20,49 @@ __meta__ = {
 
 [node name="EventoTeste" parent="Eventos" instance=ExtResource( 1 )]
 Modificadores = [ {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 4,
+"distanciaPombo": 4,
+"estrago": 4
 }, {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
 }, {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
 } ]
 
-[node name="Evento" parent="Eventos" instance=ExtResource( 2 )]
+[node name="EventoTeste2" parent="Eventos" instance=ExtResource( 1 )]
 Modificadores = [ {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 4,
+"distanciaPombo": 4,
+"estrago": 4
 }, {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
 }, {
-"Distancia": 0,
-"DistanciaPombo": 0,
-"Estrago": 0
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
 } ]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="EventoTeste3" parent="Eventos" instance=ExtResource( 1 )]
+Modificadores = [ {
+"distancia": 4,
+"distanciaPombo": 4,
+"estrago": 4
+}, {
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
+}, {
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
+} ]
 
 [connection signal="eventoTerminado" from="Eventos/EventoTeste" to="." method="_eventoTerminado"]
-[connection signal="eventoTerminado" from="Eventos/Evento" to="." method="_eventoTerminado"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="eventoTerminado" from="Eventos/EventoTeste2" to="." method="_eventoTerminado"]
+[connection signal="eventoTerminado" from="Eventos/EventoTeste3" to="." method="_eventoTerminado"]
