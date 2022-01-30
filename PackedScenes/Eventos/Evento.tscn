@@ -10,12 +10,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 Modificadores = [ {
-"distancia": 4,
-"distanciaPombo": 4,
-"estrago": 4
+"distancia": 100,
+"distanciaPombo": 0,
+"estrago": 100
 }, {
 "distancia": 0,
-"distanciaPombo": 0,
+"distanciaPombo": 100,
 "estrago": 0
 }, {
 "distancia": 0,

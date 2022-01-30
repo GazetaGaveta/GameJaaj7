@@ -22,6 +22,10 @@ func _process(delta):
 
 func _on_EventController_resultadoEvento(modificadores):
 	print(modificadores)
+	distRato = distRato + DISTANCIA_ADICIONAL + modificadores.distancia;
+	distPombo = distPombo + DISTANCIA_ADICIONAL + modificadores.distanciaPombo;
+	$Label.text = "distancia Rato: %d" % distRato;
+	$Label2.text = "distancia Pombo: %d" % distPombo;
 	$TimerDistancia.start();
 	$TimerEvento.start();
 	pass # Replace with function body.
@@ -30,7 +34,8 @@ func _on_EventController_resultadoEvento(modificadores):
 func _on_TimerDistancia_timeout():
 	distRato = distRato + DISTANCIA_ADICIONAL;
 	distPombo = distPombo + DISTANCIA_ADICIONAL;
-	$Label.text = "distancia rato: %d" % distRato;
+	$Label.text = "distancia Rato: %d" % distRato;
+	$Label2.text = "distancia Pombo: %d" % distPombo;
 	pass # Replace with function body.
 
 

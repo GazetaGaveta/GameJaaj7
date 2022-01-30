@@ -34,8 +34,27 @@ one_shot = true
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-margin_right = 128.0
+margin_left = 5.0
+margin_right = 208.0
+margin_bottom = 32.0
+text = "Distância Rato: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 32.0
+margin_right = 223.0
 margin_bottom = 64.0
+text = "Distância Pombo: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="resultadoEvento" from="EventController" to="." method="_on_EventController_resultadoEvento"]
 [connection signal="timeout" from="TimerDistancia" to="." method="_on_TimerDistancia_timeout"]

@@ -20,12 +20,12 @@ __meta__ = {
 
 [node name="EventoTeste" parent="Eventos" instance=ExtResource( 1 )]
 Modificadores = [ {
-"distancia": 4,
-"distanciaPombo": 4,
-"estrago": 4
+"distancia": 100,
+"distanciaPombo": 0,
+"estrago": 100
 }, {
 "distancia": 0,
-"distanciaPombo": 0,
+"distanciaPombo": 100,
 "estrago": 0
 }, {
 "distancia": 0,
@@ -34,34 +34,8 @@ Modificadores = [ {
 } ]
 
 [node name="EventoTeste2" parent="Eventos" instance=ExtResource( 1 )]
-Modificadores = [ {
-"distancia": 4,
-"distanciaPombo": 4,
-"estrago": 4
-}, {
-"distancia": 0,
-"distanciaPombo": 0,
-"estrago": 0
-}, {
-"distancia": 0,
-"distanciaPombo": 0,
-"estrago": 0
-} ]
 
 [node name="EventoTeste3" parent="Eventos" instance=ExtResource( 1 )]
-Modificadores = [ {
-"distancia": 4,
-"distanciaPombo": 4,
-"estrago": 4
-}, {
-"distancia": 0,
-"distanciaPombo": 0,
-"estrago": 0
-}, {
-"distancia": 0,
-"distanciaPombo": 0,
-"estrago": 0
-} ]
 
 [connection signal="eventoTerminado" from="Eventos/EventoTeste" to="." method="_eventoTerminado"]
 [connection signal="eventoTerminado" from="Eventos/EventoTeste2" to="." method="_eventoTerminado"]

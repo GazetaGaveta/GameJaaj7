@@ -3,19 +3,6 @@
 [ext_resource path="res://PackedScenes/Eventos/Evento.tscn" type="PackedScene" id=1]
 
 [node name="EventoTeste" instance=ExtResource( 1 )]
-Modificadores = [ {
-"distancia": 4,
-"distanciaPombo": 4,
-"estrago": 4
-}, {
-"distancia": 0,
-"distanciaPombo": 0,
-"estrago": 0
-}, {
-"distancia": 0,
-"distanciaPombo": 0,
-"estrago": 0
-} ]
 
 [node name="TextoEvento" parent="CaixaEvento" index="0"]
 text = "Rato de botas encontra seu antigo rival de xadrez, Marker Zukerberg, o dono de uma rede social famosa chamada Caralivro."
