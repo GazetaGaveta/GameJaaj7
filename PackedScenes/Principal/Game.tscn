@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Principal/Game.gd" type="Script" id=1]
+[ext_resource path="res://PackedScenes/Telas/TelaInicial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PackedScenes/Telas/Tela de jogo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PackedScenes/Telas/GameOver.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+menu = ExtResource( 2 )
+jogo = ExtResource( 3 )
+gameOver = ExtResource( 4 )

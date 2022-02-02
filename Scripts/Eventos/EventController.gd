@@ -21,8 +21,10 @@ func pedirEvento():
 	if(eventos.size() != 0):
 		alterarRandomNumber(eventos.size());
 		eventos[randomNumber].visible = true;	
+		return true;
 	else:
 		print("Cabou os evento parceiro");
+		return false;
 	pass
 
 func _eventoTerminado(modificadores):

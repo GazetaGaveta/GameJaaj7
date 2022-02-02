@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://PackedScenes/Eventos/EventOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Telas/GameOver.gd" type="Script" id=2]
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="EventOption" parent="." instance=ExtResource( 1 )]
+margin_top = 100.0
+margin_bottom = 200.0
+texto = "Voltar ao início"
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 20.0
+text = "Alguém venceu a corrida"
+align = 1
+
+[connection signal="pressed" from="EventOption" to="." method="_on_EventOption_pressed"]
