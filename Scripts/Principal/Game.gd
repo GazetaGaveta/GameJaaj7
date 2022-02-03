@@ -20,7 +20,7 @@ func _playPressed():
 
 func _gameOver(dist, dist2, carta):
 	$jogo.queue_free();
-	gameOverInstance();
+	gameOverInstance(dist, dist2, carta);
 	pass
 	
 func _voltarInicio():
@@ -42,9 +42,27 @@ func jogoInstace():
 	telaJogo.connect("gameOver", self, "_gameOver");
 	pass
 	
-func gameOverInstance():
+func gameOverInstance(dist, dist2, carta):
 	var telaGameOver = gameOver.instance();
+	var textoVencedor;
+	var textoGameOver; 
+	
+	if(carta == 100):
+		textoVencedor = "Pombo é o vencedor! A carta do rato foi destruída!";
+	elif(dist > dist2):
+		textoVencedor = "Rato é o vencedor! Chegou primeiro!";
+	elif(dist < dist2):
+		textoVencedor = "Pombo é o vencedor! Chegou primeiro!";
+	else:
+		textoVencedor = "Foi um empate técnico! Ambos chegaram ao mesmo tempo!";
+	
+	textoGameOver = """Distância percorrida pelo rato: %d
+	Distância percorrida pelo Pombo: %d
+	Estrago da carta do rato: %d%%
+	%s""" % [dist, dist2, carta, textoVencedor];
+	
 	telaGameOver.name = "gameOver";
+	telaGameOver.text = textoGameOver;
 	add_child(telaGameOver);
 	telaGameOver.connect("voltarInicio", self, "_voltarInicio");
 	pass

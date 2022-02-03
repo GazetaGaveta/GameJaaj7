@@ -6,8 +6,11 @@ extends Control
 # var b = "text"
 signal voltarInicio;
 
+export(String, MULTILINE) var text;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Label.text = text;
 	pass # Replace with function body.
 
 
