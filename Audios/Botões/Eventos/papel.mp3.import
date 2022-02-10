@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/papel.mp3-5a3bbb4265174bbc867eee28ce153f96.mp3str"
+
+[deps]
+
+source_file="res://Audios/Botões/Eventos/papel.mp3"
+dest_files=[ "res://.import/papel.mp3-5a3bbb4265174bbc867eee28ce153f96.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

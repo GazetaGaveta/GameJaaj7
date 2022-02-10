@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Eventos/EventOption.gd" type="Script" id=1]
+[ext_resource path="res://Imagens/Botões/Botões Eventos/botao_papel.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/Botões/Botões Eventos/botao_papel_hover.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/Botões/Botões Eventos/botao_papel_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Audios/Botões/Eventos/papel.tres" type="AudioStream" id=5]
+
+[node name="EventOption" type="TextureButton"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -70.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+texto = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+[node name="Texto" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="." to="." method="_on_EventOption_pressed"]

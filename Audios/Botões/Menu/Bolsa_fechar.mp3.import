@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bolsa_fechar.mp3-56cd6574ed22af431922e02a88f5a399.mp3str"
+
+[deps]
+
+source_file="res://Audios/Botões/Menu/Bolsa_fechar.mp3"
+dest_files=[ "res://.import/Bolsa_fechar.mp3-56cd6574ed22af431922e02a88f5a399.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

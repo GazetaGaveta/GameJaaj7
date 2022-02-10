@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Imagens/quadrado.jpg" type="Texture" id=1]
+[ext_resource path="res://PackedScenes/Eventos/EventOption.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Eventos/Evento.gd" type="Script" id=3]
+[ext_resource path="res://PackedScenes/Eventos/Resultado.tscn" type="PackedScene" id=4]
+
+[node name="Evento" type="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+Modificadores = [ {
+"distancia": 100,
+"distanciaPombo": 0,
+"estrago": 100
+}, {
+"distancia": 0,
+"distanciaPombo": 100,
+"estrago": 0
+}, {
+"distancia": 0,
+"distanciaPombo": 0,
+"estrago": 0
+} ]
+
+[node name="CaixaEvento" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -225.0
+margin_right = 400.0
+margin_bottom = 275.0
+texture = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextoEvento" type="Label" parent="CaixaEvento"]
+anchor_right = 1.0
+margin_top = 5.0
+margin_bottom = 175.0
+text = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EventOption1" parent="CaixaEvento" instance=ExtResource( 2 )]
+margin_left = 20.0
+margin_right = -20.0
+
+[node name="EventOption2" parent="CaixaEvento" instance=ExtResource( 2 )]
+margin_left = 20.0
+margin_top = 35.0
+margin_right = -20.0
+margin_bottom = 135.0
+
+[node name="EventOption3" parent="CaixaEvento" instance=ExtResource( 2 )]
+margin_left = 20.0
+margin_top = 140.0
+margin_right = -20.0
+margin_bottom = 240.0
+
+[node name="Resultado1" parent="." instance=ExtResource( 4 )]
+
+[node name="Resultado2" parent="." instance=ExtResource( 4 )]
+
+[node name="Resultado3" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="CaixaEvento/EventOption1" to="." method="_on_EventOption_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="CaixaEvento/EventOption2" to="." method="_on_EventOption_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="CaixaEvento/EventOption3" to="." method="_on_EventOption_pressed" binds= [ 2 ]]
+[connection signal="resultadoFoiLido" from="Resultado1" to="." method="_on_Resultado_resultadoFoiLido"]
+[connection signal="resultadoFoiLido" from="Resultado2" to="." method="_on_Resultado_resultadoFoiLido"]
+[connection signal="resultadoFoiLido" from="Resultado3" to="." method="_on_Resultado_resultadoFoiLido"]

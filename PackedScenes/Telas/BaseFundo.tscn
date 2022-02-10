@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="Fundo1" type="TextureRect"]
+margin_right = 1024.0
+margin_bottom = 200.0
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
